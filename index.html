@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // write a program to print the previous characters in the given string
+
+      let str = "always";
+      res = "";
+      for (i = 0; i < str.length; i++) {
+        code = str.charCodeAt(i);
+        if (code == 97) {
+          char = String.fromCharCode(code + 25);
+          res = res + char;
+        } else {
+          char = String.fromCharCode(code - 1);
+          res = res + char;
+        }
+      }
+      console.log(res);
+
+      //   write a program to implement the padstart functionality
+
+      let input = "hello";
+      let length = 30;
+      let chara = "hello all";
+      let result = "";
+      let padLength = length - input.length;
+      for (let i = 0; i < padLength; i++) {
+        result += chara[i % chara.length];
+      }
+      result += input;
+
+      console.log(result);
+    </script>
+  </body>
+</html>
